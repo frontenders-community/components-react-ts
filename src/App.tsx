@@ -1,12 +1,42 @@
-import { useState } from 'react';
-import './App.css'
-import FButton, { Border, Size as ButtonSize } from './components/FButton'
+import { useState } from "react";
+import "./App.css";
+import FButton, { Border, Size as ButtonSize } from "./components/FButton";
 import {
   FTextField,
   Size as TextFieldSize,
   Color,
   TextFieldType,
 } from "./components/FTextField";
+import { FStepper, Step } from "./components/FStepper";
+import IconEye from "./icons/IconEye";
+
+const steps: Array<Step> = [
+  {
+    title: "First step",
+    content: (
+      <p>First step content</p>
+    ),
+    icon: <IconEye/>
+  },
+  {
+    title: "Second step",
+    content: (
+      <p>Second step content</p>
+    )
+  },
+  {
+    title: "Third step",
+    content: (
+      <p>Third step content</p>
+    )
+  },
+  {
+    title: "Fourth step",
+    content: (
+      <p>Fourth step content</p>
+    )
+  }
+]
 
 function App() {
   const [textValue, setTextValue] = useState("Ciao");
@@ -21,7 +51,7 @@ function App() {
   }
 
   function f() {
-    console.log('click');
+    console.log("click");
   }
 
   return (
@@ -30,6 +60,14 @@ function App() {
         <section>
           <div className="container">
             <h1>Frontenders UI KIT</h1>
+          </div>
+        </section>
+
+        <section>
+          <div className="contianer">
+            <div className="box">
+              <FStepper steps={steps} initialStep={1}></FStepper>
+            </div>
           </div>
         </section>
 
@@ -95,9 +133,23 @@ function App() {
             <div className="box">
               <h1>Icons</h1>
               <div className="flex">
-                <FButton text="Icon Left" icon="fa-solid fa-user" iconPosition="left" state="primary" />
-                <FButton text="Icon Right" icon="fa-solid fa-location-dot" iconPosition="right" state="info" />
-                <FButton icon="fa-solid fa-check" state="success" border={Border.Rounded} />
+                <FButton
+                  text="Icon Left"
+                  icon="fa-solid fa-user"
+                  iconPosition="left"
+                  state="primary"
+                />
+                <FButton
+                  text="Icon Right"
+                  icon="fa-solid fa-location-dot"
+                  iconPosition="right"
+                  state="info"
+                />
+                <FButton
+                  icon="fa-solid fa-check"
+                  state="success"
+                  border={Border.Rounded}
+                />
               </div>
             </div>
           </div>
@@ -321,7 +373,7 @@ function App() {
         </section>
       </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
