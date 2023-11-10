@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 :root {
   /* Color scheme */
@@ -14,8 +14,13 @@
   --warning-color: #f39c12;
   --danger-color: #e74c3c;
   --disabled-color: #dde6e6;
+  --primary-color-dark: rgba(0, 77, 64, 0.6);
+  --link-color-dark: rgba(0, 64, 128, 0.6);
+  --info-color-dark: rgba(0, 64, 128, 0.6);
+  --success-color-dark: rgba(0, 100, 1, 0.6);
+  --warning-color-dark: rgba(179, 107, 0, 0.6);
+  --danger-color-dark: rgba(153, 42, 42, 0.6);
 }
-
 
 * {
   margin: 0;
@@ -24,5 +29,5 @@
 }
 
 body {
-  font-family: 'Urbanist', sans-serif;
+  font-family: "Urbanist", sans-serif;
 }

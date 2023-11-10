@@ -9,34 +9,27 @@ import {
 } from "./components/FTextField";
 import { FStepper, Step } from "./components/FStepper";
 import IconEye from "./icons/IconEye";
+import Chips from "./components/FChips";
 
 const steps: Array<Step> = [
   {
     title: "First step",
-    content: (
-      <p>First step content</p>
-    ),
-    icon: <IconEye/>
+    content: <p>First step content</p>,
+    icon: <IconEye />,
   },
   {
     title: "Second step",
-    content: (
-      <p>Second step content</p>
-    )
+    content: <p>Second step content</p>,
   },
   {
     title: "Third step",
-    content: (
-      <p>Third step content</p>
-    )
+    content: <p>Third step content</p>,
   },
   {
     title: "Fourth step",
-    content: (
-      <p>Fourth step content</p>
-    )
-  }
-]
+    content: <p>Fourth step content</p>,
+  },
+];
 
 function App() {
   const [textValue, setTextValue] = useState("Ciao");
@@ -268,107 +261,39 @@ function App() {
                 />
               </div>
             </div>
-
-            {/* <div className="box">
-            <h3>Borders</h3>
-
-            <div className="flex">
-              <FTextField id="normal-border-textfield" label="Normal" />
-              <FTextField
-                id="squared-border-textfield"
-                label="Squared"
-                border="squared"
+            <div className="container">
+              <h3>Chips</h3>
+              <Chips label={"chips"} size={"small"} rounded={false} />
+              <Chips
+                label={"small solid"}
+                appearance={"solid"}
+                size={"small"}
+                rounded={false}
               />
-              <FTextField
-                id="rounded-border-textfield"
-                label="Rounded"
-                border="rounded"
+              <Chips label={"rounded outline"} size={"large"} rounded={true} />
+              <Chips
+                label={"Rounded small"}
+                appearance={"solid"}
+                size={"small"}
+                rounded={true}
+                type="warning"
               />
-            </div>
-          </div> */}
-
-            {/* <div className="box">
-            <h3>Icons</h3>
-
-            <div className="flex">
-              <FTextField
-                id="icon-left-textfield"
-                label="Left Icon"
-                icon-left="fa-regular fa-envelope"
+              <Chips
+                label={"chipserror"}
+                size={"small"}
+                rounded={false}
+                type="error"
+                appearance={"solid"}
               />
-              <FTextField
-                id="icon-right-textfield"
-                label="Right Icon"
-                icon-right="fa-regular fa-eye"
-              />
-              <FTextField
-                id="icon-both-textfield"
-                label="Left and Right Icon"
-                icon-left="fa-regular fa-envelope"
-                icon-right="fa-solid fa-check"
+              <Chips
+                label={"medium outline"}
+                size={"medium"}
+                appearance="outline"
+                rounded={false}
+                type="info"
+                icon={<IconEye />}
               />
             </div>
-            <div className="flex">
-              <FTextField
-                id="icon-primary-textfield"
-                label="Primary Icon"
-                color={Color.Primary}
-                icon-left="fa-regular fa-envelope"
-              />
-              <FTextField
-                id="icon-info-textfield"
-                label="Info Icon"
-                color={Color.Info}
-                icon-left="fa-regular fa-envelope"
-              />
-              <FTextField
-                id="icon-fanger-textfield"
-                label="Danger Icon"
-                color={Color.Danger}
-                icon-left="fa-regular fa-envelope"
-              />
-            </div>
-            <div className="flex">
-              <FTextField
-                id="icon-small-textfield"
-                label="Small Icon"
-                size={Size.Small}
-                icon-left="fa-regular fa-envelope"
-              />
-              <FTextField
-                id="icon-medium-textfield"
-                label="Medium Icon"
-                size={Size.Medium}
-                icon-left="fa-regular fa-envelope"
-              />
-              <FTextField
-                id="icon-large-textfield"
-                label="Large Icon"
-                size={Size.Large}
-                icon-left="fa-regular fa-envelope"
-              />
-            </div>
-          </div> */}
-
-            {/* <div className="box">
-            <h3>Input value</h3>
-
-            <div className="flex">
-              <FTextField
-                id="value-textfield"
-                label="Reactive value"
-              />
-            </div>
-            <p>Value of input</p>
-          </div> */}
-
-            {/* <div className="box">
-            <h3>Floating label</h3>
-
-            <div className="flex">
-              <FTextField id="floating-textfield" label="Floating" floating />
-            </div>
-          </div> */}
           </div>
         </section>
       </main>

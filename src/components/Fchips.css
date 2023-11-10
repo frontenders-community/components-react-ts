@@ -1,0 +1,71 @@
+.chip {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.chips:hover {
+  -webkit-filter: brightness(130%);
+  filter: brightness(130%);
+}
+.chip[data-rounded="round"] {
+  border-radius: 36px;
+}
+/* Size chips CSS */
+.chip[data-size="small"] {
+  font-size: 10px;
+}
+
+.chip[data-size="medium"] {
+  font-size: 14px;
+}
+
+.chip[data-size="large"] {
+  font-size: 18px;
+}
+
+.chip[data-appearance="solid"] {
+  border-color: #333;
+}
+.chip[data-type="info"] {
+  border-color: var(--info-color);
+  background-color: var(--info-color-dark);
+  color: var(--white-color);
+}
+
+.chip[data-type="warning"] {
+  border-color: var(--warning-color);
+  background-color: var(--warning-color-dark);
+  color: var(--white-color);
+}
+
+.chip[data-type="error"] {
+  border-color: var(--danger-color);
+  background-color: var(--danger-color-dark);
+  color: var(--white-color);
+}
+
+.chip[data-type="success"] {
+  border-color: var(--success-color);
+  background-color: var(--success-color-dark);
+  color: var(--white-color);
+}
+
+.chip[data-type="primary"] {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color-dark);
+  color: var(--white-color);
+}
+/* Type chips CSS */
+.chip[data-appearance="outline"] {
+  background-color: transparent;
+  color: var(--text-color);
+}
